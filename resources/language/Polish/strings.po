@@ -9,3 +9,8 @@ msgstr ""
 msgctxt "#32000"
 msgid "Trailer not exist"
 msgstr "Trailer nie istnieje"
+
+#: Notification
+msgctxt "#32100"
+msgid "Notify when trailer not exist"
+msgstr "Powiadamiaj jeśli trailer nie istnieje"

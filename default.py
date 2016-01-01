@@ -30,6 +30,7 @@ class PlayTrailer:
             return
             
     def notify(self, msg):
-        xbmc.executebuiltin('Notification(' + __addonname__ + ', ' + msg.encode('utf-8') + ', 4000, ' + __icon__ + ')')
+        if 'true' in __addon__.getSetting('notify'):
+            xbmc.executebuiltin('Notification(' + __addonname__ + ', ' + msg.encode('utf-8') + ', 4000, ' + __icon__ + ')')
         
 PlayTrailer()
