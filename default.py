@@ -23,12 +23,18 @@ class PlayTrailer:
         if 'plugin://plugin.video.youtube' not in trailer:
             trailer = urllib.quote(trailer).replace('%3A', ':')
         
+        self.debug(trailer)
+        
         if len(trailer) > 0:
             xbmc.Player().play(trailer)
         else:
             self.notify(__lang__(32000))
             return
             
+    def debug(self, msg):
+        if 'true' in __addon__.getSetting('debug'):
+            xbmc.log('>>>> ' + __addonname__ + ' <<<< ' + msg)
+        
     def notify(self, msg):
         if 'true' in __addon__.getSetting('notify'):
             xbmc.executebuiltin('Notification(' + __addonname__ + ', ' + msg.encode('utf-8') + ', 4000, ' + __icon__ + ')')

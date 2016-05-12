@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <settings>
     <setting label="32100" type="bool" id="notify" default="true" />
+    <setting label="32101" type="bool" id="debug" default="false" />
 </settings>
